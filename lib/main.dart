@@ -1,5 +1,5 @@
-import 'package:favorite_list/categories_screen.dart';
-import 'package:favorite_list/category_meals_screen.dart';
+import 'package:favorite_list/screens/categories_screen.dart';
+import 'package:favorite_list/screens/category_meals_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
