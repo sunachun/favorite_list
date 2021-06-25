@@ -1,5 +1,6 @@
 import 'package:favorite_list/screens/categories_screen.dart';
 import 'package:favorite_list/screens/category_meals_screen.dart';
+import 'package:favorite_list/screens/filters_screen.dart';
 import 'package:favorite_list/screens/meal_detail_screen.dart';
 import 'package:favorite_list/screens/tabs_screen.dart';
 import 'package:flutter/material.dart';
@@ -36,6 +37,7 @@ class MyApp extends StatelessWidget {
         '/': (ctx) => TabsScreen(),
         CategoryMealsScreen.routeName: (ctx) => CategoryMealsScreen(),
         MealDetailScreen.routeName: (ctx) => MealDetailScreen(),
+        FiltersScreen.routeName: (ctx) => FiltersScreen(),
       },
       onGenerateRoute: (setting) {
         print(setting.arguments);
