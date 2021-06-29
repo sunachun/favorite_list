@@ -11,9 +11,7 @@ class MealDetailScreen extends StatelessWidget {
 
   Widget buildSectionTitle(BuildContext context, String text) {
     return Container(
-      margin: EdgeInsets.symmetric(
-        vertical: 10,
-      ),
+      margin: EdgeInsets.symmetric(vertical: 10),
       child: Text(
         text,
         style: Theme.of(context).textTheme.title,
@@ -55,18 +53,17 @@ class MealDetailScreen extends StatelessWidget {
                 fit: BoxFit.cover,
               ),
             ),
-            buildSectionTitle(context, 'ingredients'),
+            buildSectionTitle(context, 'Ingredients'),
             buildContainer(
               ListView.builder(
                 itemBuilder: (ctx, index) => Card(
                   color: Theme.of(context).accentColor,
                   child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                      vertical: 5,
-                      horizontal: 10,
-                    ),
-                    child: Text(selectedMeal.ingredients[index]),
-                  ),
+                      padding: EdgeInsets.symmetric(
+                        vertical: 5,
+                        horizontal: 10,
+                      ),
+                      child: Text(selectedMeal.ingredients[index])),
                 ),
                 itemCount: selectedMeal.ingredients.length,
               ),
@@ -75,7 +72,7 @@ class MealDetailScreen extends StatelessWidget {
             buildContainer(
               ListView.builder(
                 itemBuilder: (ctx, index) => Column(
-                  children: <Widget>[
+                  children: [
                     ListTile(
                       leading: CircleAvatar(
                         child: Text('# ${(index + 1)}'),
@@ -84,7 +81,7 @@ class MealDetailScreen extends StatelessWidget {
                         selectedMeal.steps[index],
                       ),
                     ),
-                    Divider(),
+                    Divider()
                   ],
                 ),
                 itemCount: selectedMeal.steps.length,
